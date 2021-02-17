@@ -3,12 +3,14 @@ import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import {createGlobalStyle} from "styled-components";
 import {ThemeProvider} from "styled-components";
 import Add from "./containers/add";
+import Dashboard from "./containers/dashboard";
 
 const theme = {
     btnBg: "#2EBAEE",
     btnTxt: "#ffffff",
     bg: "#46529D",
     color: "#ffffff",
+    gray: "#D3D3D3"
 };
 const GlobalStyle = createGlobalStyle`
   *{
@@ -26,6 +28,9 @@ function App() {
             <Router>
                 <Switch>
                     <Route exact path="/">
+                        <Dashboard/>
+                    </Route>
+                    <Route exact path="/add">
                         <Add/>
                     </Route>
                 </Switch>
