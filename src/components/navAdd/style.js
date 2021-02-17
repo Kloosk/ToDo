@@ -5,6 +5,7 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  margin-bottom: 15px;
   width: 100%;
 `;
 export const H1 = styled.h1`

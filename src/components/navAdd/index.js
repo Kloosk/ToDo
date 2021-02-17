@@ -5,7 +5,7 @@ import UndoButton from "../../shared/undoButton";
 const NavAdd = () => {
     return (
         <Nav>
-            <UndoButton/>
+            <UndoButton link="/"/>
             <H1>Add new thing</H1>
         </Nav>
     );
