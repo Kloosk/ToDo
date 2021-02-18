@@ -4,6 +4,8 @@ import {createGlobalStyle} from "styled-components";
 import {ThemeProvider} from "styled-components";
 import Add from "./containers/add";
 import Dashboard from "./containers/dashboard";
+import {Provider} from "react-redux";
+import store from "./redux/store";
 
 const theme = {
     btnBg: "#2EBAEE",
@@ -24,18 +26,20 @@ function App() {
   return (
       <>
         <GlobalStyle/>
-        <ThemeProvider theme={theme}>
-            <Router>
-                <Switch>
-                    <Route exact path="/">
-                        <Dashboard/>
-                    </Route>
-                    <Route exact path="/add">
-                        <Add/>
-                    </Route>
-                </Switch>
-            </Router>
-        </ThemeProvider>
+          <Provider store={store}>
+            <ThemeProvider theme={theme}>
+                <Router>
+                    <Switch>
+                        <Route exact path="/">
+                            <Dashboard/>
+                        </Route>
+                        <Route exact path="/add">
+                            <Add/>
+                        </Route>
+                    </Switch>
+                </Router>
+            </ThemeProvider>
+          </Provider>
       </>
     );
 }
