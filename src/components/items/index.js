@@ -1,18 +1,15 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import {Container} from "./style";
-import Item from "../item";
+import {useSelector} from "react-redux";
+
+import Item from "components/items/Item.js";
 
 const Items = () => {
-    const [things,setThings] = useState([]);
-    useEffect(() => {
-        const localThings = localStorage.getItem("things");
-        if (localThings !== null) {
-            setThings(JSON.parse(localThings));
-        }
-    },[]);
+    const things = useSelector(state => state.things.things);
     return (
         <Container>
-            {things.map(({type,name,place,time},id) => <Item key={id} type={type} name={name} place={place} time={time}/>)}
+            {/*id w obiektach*/}
+            {things.map((props,id) => <Item key={id} {...props}/>)}
         </Container>
     );
 };
