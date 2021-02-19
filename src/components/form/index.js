@@ -5,21 +5,13 @@ import {FormStyle,Error} from "./style";
 import Submit from "../../shared/submit";
 import InputText from "../../shared/input";
 import Select from "../../shared/select";
+import {setDataInLocalStorage} from "../../helpers/setDataInLocalStorage";
 
 const Form = () => {
     const history = useHistory();
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data =>{
-        const things = localStorage.getItem("things");
-        if (things !== null) {
-            const arr = JSON.parse(things);
-            arr.push(data);
-            localStorage.setItem("things", JSON.stringify(arr));
-        }else{
-            const arr = [];
-            arr.push(data);
-            localStorage.setItem("things", JSON.stringify(arr));
-        }
+        setDataInLocalStorage(data);
         history.push("/");
     };
     return (

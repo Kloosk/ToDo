@@ -24,17 +24,15 @@ export const setCountBusiness = (payload) => {
         payload
     }
 };
-export const getThings = () => (dispatch) => {
-    const things = localStorage.getItem("things");
-    if (things !== null) {
+export const getThings = () => dispatch => {
+    const objOfThings = localStorage.getItem("things");
+    if (objOfThings !== null) {
         //wszystko w obiekcie
-        const data = JSON.parse(things);
-        let personalCounter = 0;
-        let businessCounter = 0;
-        dispatch(addThing(data));
-        dispatch(setCount(data.length));
-        data.forEach(({type}) => type === "personal" ? personalCounter++ : businessCounter++);
-        dispatch(setCountBusiness(businessCounter));
-        dispatch(setCountPersonal(personalCounter));
+        console.log(JSON.parse(objOfThings));
+        const {things,count,countBusiness,countPersonal} = JSON.parse(objOfThings);
+        dispatch(addThing(things));
+        dispatch(setCount(count));
+        dispatch(setCountBusiness(countBusiness));
+        dispatch(setCountPersonal(countPersonal));
     }
 };

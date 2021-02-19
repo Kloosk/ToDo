@@ -4,8 +4,7 @@ import thingReducer from "./thing/ThingReducer";
 import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
-    things: thingReducer,
-    general:
+    things: thingReducer
 });
 
 const store = createStore(rootReducer,applyMiddleware(thunk));
