@@ -27,8 +27,6 @@ export const setCountBusiness = (payload) => {
 export const getThings = () => dispatch => {
     const objOfThings = localStorage.getItem("things");
     if (objOfThings !== null) {
-        //wszystko w obiekcie
-        console.log(JSON.parse(objOfThings));
         const {things,count,countBusiness,countPersonal} = JSON.parse(objOfThings);
         dispatch(addThing(things));
         dispatch(setCount(count));

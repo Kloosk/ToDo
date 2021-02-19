@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const P = styled.p`
+export const TimeTag = styled.time`
   margin-top: 20px;
   font-size: 0.7rem;
   color: ${props => props.theme.gray};

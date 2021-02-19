@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import {P} from "./style";
+import {TimeTag} from "./style";
 import {getTime} from "../../helpers/getTime";
 
 const Time = () => {
@@ -8,7 +8,7 @@ const Time = () => {
         setTime(getTime());
     },[]);
     return (
-        <P>{time}</P>
+        <TimeTag>{time}</TimeTag>
     );
 };
 
