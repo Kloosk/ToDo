@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 export const setDataInLocalStorage = (newData) => {
     newData['id'] = uuidv4();
+    newData['done'] = false;
     const things = localStorage.getItem("things");
     let dataOfThings = {
         thingsTodo: [],

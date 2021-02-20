@@ -12,7 +12,7 @@ export const Done = styled.div`
    height: 35px;
    border-radius: 50%;
    margin-right: 10px;
-   border: 1px solid #2EBAEE;;
+   border: 1px solid  ${props => props.done ? "#228c22" : "#2EBAEE" };
    position: relative;
 `;
 export const Svg = styled.svg`
@@ -22,7 +22,7 @@ export const Svg = styled.svg`
    transform: translate(-50%,-50%);
    width: 25px;
    height: 25px;
-   color: #2EBAEE;;
+   color: ${props => props.done ? "#228c22" : "#2EBAEE" };
 `;
 export const H1 = styled.h1`
   font-size: 1rem;
@@ -55,7 +55,7 @@ export const Flex = styled.div`
   display: flex;
 `;
 export const ButtonToolbar = styled.button`
-  border: 1px solid #2EBAEE;
+  border: 1px solid ${props => props.done ? "#228c22" : "#2EBAEE" };
   background: transparent;
   outline: none;
   height: 40px;
@@ -71,5 +71,5 @@ export const SvgToolbar = styled.svg`
    transform: translate(-50%,-50%);
    width: 25px;
    height: 25px;
-   color: #2EBAEE;
+   color: ${props => props.done ? "#228c22" : "#2EBAEE" };
 `;

@@ -17,10 +17,10 @@ const Form = () => {
     return (
         <FormStyle onSubmit={handleSubmit(onSubmit)}>
             <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>
-            <InputText txt="Name" name="name" ref={register({required: true,maxLength:20,minLength: 3})}/>
+            <InputText txt="Name" name="name" ref={register({required: true,maxLength:40,minLength: 3})}/>
             {errors.name && errors.name.type === "required" && <Error role="alert">This field is required</Error>}
             {errors.name && errors.name.type === "minLength" && <Error role="alert">Min length 3</Error>}
-            {errors.name && errors.name.type === "maxLength" && <Error role="alert">Max length 20</Error>}
+            {errors.name && errors.name.type === "maxLength" && <Error role="alert">Max length 40</Error>}
 
             <InputText txt="Place" name="place" ref={register({required: true})}/>
             {errors.place && <Error role="alert">This field is required</Error>}

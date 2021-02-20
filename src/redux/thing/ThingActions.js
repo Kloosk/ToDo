@@ -1,4 +1,4 @@
-import {ADD_THING, REMOVE_THING, SET_COUNT, SET_COUNT_BUSINESS, SET_COUNT_PERSONAL} from "./ThingTypes";
+import {ADD_THING, REMOVE_THING, SET_COUNT, SET_COUNT_BUSINESS, SET_COUNT_PERSONAL, SET_DONE} from "./ThingTypes";
 
 export const addThing = (payload) => {
     return{
@@ -29,6 +29,12 @@ export const removeThing = (payload) => {
       type: REMOVE_THING,
       payload
   }
+};
+export const setDone = (payload) => {
+   return{
+       type: SET_DONE,
+       payload
+   }
 };
 export const getThings = () => dispatch => {
     const objOfThings = localStorage.getItem("things");
