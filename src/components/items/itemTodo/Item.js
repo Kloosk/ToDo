@@ -1,11 +1,9 @@
 import React,{useState} from 'react';
 import {Container, Done, H1, P, Time, Svg, UpperPart, LowerPart, Flex, SvgToolbar, ButtonToolbar} from "./Item.style";
 import {deleteThings} from "../../../helpers/deleteThing";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
-const Item = ({idx,type,name,place,time}) => {
-    const dispatch = useDispatch();
-    const things = useSelector(state => state.things.things);
+const Item = ({id,type,name,place,time}) => {
     const [collapse,setCollapse] = useState(false);
     const handleClick = () => {
         setCollapse(prevState => !prevState);
@@ -36,7 +34,7 @@ const Item = ({idx,type,name,place,time}) => {
                 <ButtonToolbar onClick={handleDone}>
                     <SvgToolbar aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></SvgToolbar>
                 </ButtonToolbar>
-                <ButtonToolbar onClick={deleteThings(idx,dispatch,things)}>
+                <ButtonToolbar onClick={() => deleteThings(id,type)}>
                     <SvgToolbar aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path></SvgToolbar>
                 </ButtonToolbar>
             </LowerPart>

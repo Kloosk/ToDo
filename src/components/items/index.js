@@ -5,10 +5,10 @@ import {useSelector} from "react-redux";
 import Item from "./itemTodo/Item";
 
 const Items = () => {
-    const things = useSelector(state => state.things.things);
+    const things = useSelector(state => state.things.thingsTodo);
     return (
         <Container>
-            {things.map(({id,...props},idx) => <Item key={id} idx={idx} {...props}/>)}
+            {things.map(({id,...props}) => <Item key={id} id={id} {...props}/>)}
         </Container>
     );
 };

@@ -3,7 +3,7 @@ export const setDataInLocalStorage = (newData) => {
     newData['id'] = uuidv4();
     const things = localStorage.getItem("things");
     let dataOfThings = {
-        things: [],
+        thingsTodo: [],
         count: 1,
         countPersonal: 0,
         countBusiness: 0
@@ -11,7 +11,7 @@ export const setDataInLocalStorage = (newData) => {
 
     if (things !== null) {//exists
         dataOfThings = JSON.parse(things);
-        dataOfThings.things.push(newData);
+        dataOfThings.thingsTodo.push(newData);
         dataOfThings.count+=1;
 
         if(newData.type === "business"){
@@ -20,7 +20,7 @@ export const setDataInLocalStorage = (newData) => {
 
         localStorage.setItem("things", JSON.stringify(dataOfThings));
     }else{
-        dataOfThings.things.push(newData);
+        dataOfThings.thingsTodo.push(newData);
 
         if(newData.type === "business"){
             dataOfThings.countBusiness+=1;
