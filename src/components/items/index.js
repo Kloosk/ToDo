@@ -8,7 +8,7 @@ const Items = () => {
     const things = useSelector(state => state.things.things);
     return (
         <Container>
-            {things.map(({id,...props}) => <Item key={id} {...props}/>)}
+            {things.map(({id,...props},idx) => <Item key={id} idx={idx} {...props}/>)}
         </Container>
     );
 };

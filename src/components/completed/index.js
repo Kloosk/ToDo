@@ -6,7 +6,7 @@ const Completed = () => {
     const {count} = useSelector(state => state.things);
     return (
         <Container>
-            <P>COMPLETED</P>
+            <P>ALL</P>
             <Circle>{count}</Circle>
         </Container>
     );
