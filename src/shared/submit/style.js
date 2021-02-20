@@ -10,4 +10,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   font-size: 1.2rem;
   outline: none;
+  &:hover{
+    transform: translateY(2px);
+  }
 `;
