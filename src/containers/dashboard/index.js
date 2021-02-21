@@ -7,7 +7,6 @@ import Items from "../../components/items";
 import {getThings} from "../../redux/thing/ThingActions";
 import {useDispatch} from "react-redux";
 import HamMenu from "../../components/hamMenu/hamMenu";
-import {hamMenuClose} from "../../redux/hamMenu/hamMenuActions";
 
 const Dashboard = () => {
     const dispatch = useDispatch();
@@ -18,12 +17,10 @@ const Dashboard = () => {
     return (
       <Container>
           <HamMenu/>
-          <div onClick={() => dispatch(hamMenuClose())}>
           <NavDashboard/>
           <Items/>
           <Completed/>
           <AddButton link="/add"/>
-          </div>
       </Container>
     );
 };

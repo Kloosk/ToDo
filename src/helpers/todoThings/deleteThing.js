@@ -1,5 +1,5 @@
-import {removeThing} from "../redux/thing/ThingActions";
-import store from "../redux/store";
+import {removeThing} from "../../redux/thing/ThingActions";
+import store from "../../redux/store";
 
 export const deleteThings = (id,type) => {
     const {things} = store.getState();

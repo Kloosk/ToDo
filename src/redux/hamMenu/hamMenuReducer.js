@@ -7,13 +7,15 @@ const initialState = {
 const hamMenuReducer = (state=initialState,action) => {
     switch(action.type){
         case MENU_CLOSE:{
+            console.log("menuclose",state.hamMenu);
             return{
                 hamMenu: false
             }
         }
         case MENU_TOGGLE:{
+            console.log("menutoggle",state.hamMenu);
             return{
-                hamMenu: !state.hamMenu
+                hamMenu: true
             }
         }
         default: return state

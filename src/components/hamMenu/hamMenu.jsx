@@ -1,6 +1,6 @@
 import React from 'react';
-import {Container,Ul,Li} from "./hamMenu.style";
-import {removeAllThings} from "../../helpers/removeAllThings";
+import {Container,Ul,Li,Button} from "./hamMenu.style";
+import {removeAllThings} from "../../helpers/todoThings/removeAllThings";
 import {useSelector} from "react-redux";
 
 const HamMenu = () => {
@@ -8,7 +8,7 @@ const HamMenu = () => {
     return (
         <Container menuStatus={menuStatus}>
             <Ul>
-                <Li onClick={() => removeAllThings()}>Remove all</Li>
+                <Li><Button onClick={() => removeAllThings()}>Remove all</Button></Li>
             </Ul>
         </Container>
     );

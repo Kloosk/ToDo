@@ -5,7 +5,7 @@ import {FormStyle,Error} from "./style";
 import Submit from "../../shared/submit";
 import InputText from "../../shared/input";
 import Select from "../../shared/select";
-import {setDataInLocalStorage} from "../../helpers/setDataInLocalStorage";
+import {setDataInLocalStorage} from "../../helpers/todoThings/setDataInLocalStorage";
 
 const Form = () => {
     const history = useHistory();

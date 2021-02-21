@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import {Container, Done, H1, P, Time, Svg, UpperPart, LowerPart, Flex, SvgToolbar, ButtonToolbar} from "./Item.style";
-import {deleteThings} from "../../../helpers/deleteThing";
-import {setDoneFunc} from "../../../helpers/setDone";
+import {deleteThings} from "../../../helpers/todoThings/deleteThing";
+import {setDoneFunc} from "../../../helpers/todoThings/setDone";
 
 const Item = ({id,type,name,place,time,done}) => {
     const [collapse,setCollapse] = useState(false);
