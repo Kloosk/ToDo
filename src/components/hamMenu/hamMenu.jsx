@@ -1,16 +1,20 @@
 import React from 'react';
 import {Container,Ul,Li,Button} from "./hamMenu.style";
 import {removeAllThings} from "../../helpers/todoThings/removeAllThings";
-import {useSelector} from "react-redux";
+import useComponentVisible from "../../hooks/useComponentVisible";
+import MenuButton from "../../shared/menuButton";
 
 const HamMenu = () => {
-    const menuStatus = useSelector(props => props.menu.hamMenu);
+    const [ ref, isComponentVisible,setIsComponentVisible] = useComponentVisible(false);
     return (
-        <Container menuStatus={menuStatus}>
-            <Ul>
-                <Li><Button onClick={() => removeAllThings()}>Remove all</Button></Li>
-            </Ul>
-        </Container>
+        <>
+            <MenuButton func={setIsComponentVisible}/>
+            {isComponentVisible && (<Container ref={ref}>
+                <Ul>
+                    <Li><Button onClick={() => removeAllThings()}>Remove all</Button></Li>
+                </Ul>
+            </Container>)}
+        </>
     );
 };
 

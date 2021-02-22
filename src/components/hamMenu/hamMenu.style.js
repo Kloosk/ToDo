@@ -1,17 +1,15 @@
 import styled from 'styled-components'
 import bgDashboard from '../../assets/img/bgDashboard.jpg'
 
-
 export const Container = styled.nav`
   position: fixed;
-  top: 45px;
-  left: 15px;
+  top: 0;
+  left: 0;
   background: url(${bgDashboard}) no-repeat center/cover;
   z-index: 999;
   width: 60vw;
   height: 50vh;
   border: 2px solid ${props => props.theme.btnBg};
-  visibility: ${props => props.menuStatus ? "visible" : "hidden"};
   overflow: hidden;
 `;
 export const Ul = styled.ul`
