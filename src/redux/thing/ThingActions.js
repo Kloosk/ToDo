@@ -1,43 +1,9 @@
 import {
-    ADD_THING,
     CLEAR_ALL,
-    REMOVE_THING,
-    SET_COUNT,
-    SET_COUNT_BUSINESS,
-    SET_COUNT_PERSONAL,
-    SET_DONE
+    SET_DONE,
+    SET_ALL_OBJ
 } from "./ThingTypes";
 
-export const addThing = (payload) => {
-    return{
-        type: ADD_THING,
-        payload
-    }
-};
-export const setCount = (payload) => {
-    return{
-        type: SET_COUNT,
-        payload
-    }
-};
-export const setCountPersonal = (payload) => {
-    return{
-        type: SET_COUNT_PERSONAL,
-        payload
-    }
-};
-export const setCountBusiness = (payload) => {
-    return{
-        type: SET_COUNT_BUSINESS,
-        payload
-    }
-};
-export const removeThing = (payload) => {
-  return{
-      type: REMOVE_THING,
-      payload
-  }
-};
 export const setDone = (payload) => {
    return{
        type: SET_DONE,
@@ -49,13 +15,21 @@ export const clearAll = () => {
       type: CLEAR_ALL
   }
 };
+export const setAllObj = (payload) => {
+    return {
+        type: SET_ALL_OBJ,
+        payload
+    }
+};
 export const getThings = () => dispatch => {
     const objOfThings = localStorage.getItem("things");
     if (objOfThings !== null) {
         const {thingsTodo,count,countBusiness,countPersonal} = JSON.parse(objOfThings);
-        dispatch(addThing(thingsTodo));
-        dispatch(setCount(count));
-        dispatch(setCountBusiness(countBusiness));
-        dispatch(setCountPersonal(countPersonal));
+        dispatch(setAllObj({
+            thingsTodo,
+            count,
+            countBusiness,
+            countPersonal
+        }));
     }
 };

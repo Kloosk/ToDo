@@ -1,11 +1,7 @@
 import {
-    ADD_THING,
     CLEAR_ALL,
-    REMOVE_THING,
-    SET_COUNT,
-    SET_COUNT_BUSINESS,
-    SET_COUNT_PERSONAL,
-    SET_DONE
+    SET_DONE,
+    SET_ALL_OBJ
 } from "./ThingTypes";
 
 const initialState = {
@@ -17,32 +13,8 @@ const initialState = {
 
 const thingReducer = (state=initialState,action) => {
     switch (action.type) {
-        case ADD_THING:{
+        case SET_ALL_OBJ:{
             return{
-                ...state,
-                thingsTodo: action.payload
-            }
-        }
-        case SET_COUNT:{
-            return{
-                ...state,
-                count: action.payload
-            }
-        }
-        case SET_COUNT_BUSINESS:{
-            return{
-                ...state,
-                countBusiness: action.payload
-            }
-        }
-        case SET_COUNT_PERSONAL:{
-            return{
-                ...state,
-                countPersonal: action.payload
-            }
-        }
-        case REMOVE_THING:{
-            return {
                 thingsTodo: action.payload.thingsTodo,
                 count: action.payload.count,
                 countPersonal: action.payload.countPersonal,

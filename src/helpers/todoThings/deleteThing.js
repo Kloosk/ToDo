@@ -1,4 +1,4 @@
-import {removeThing} from "../../redux/thing/ThingActions";
+import {setAllObj} from "../../redux/thing/ThingActions";
 import store from "../../redux/store";
 
 export const deleteThings = (id,type) => {
@@ -9,5 +9,5 @@ export const deleteThings = (id,type) => {
     type === "business" ? things.countBusiness-- : things.countPersonal--;
 
     localStorage.setItem("things",JSON.stringify(things));
-    store.dispatch(removeThing(things));
+    store.dispatch(setAllObj(things));
 };
