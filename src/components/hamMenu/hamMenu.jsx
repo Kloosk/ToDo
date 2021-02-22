@@ -11,7 +11,7 @@ const HamMenu = () => {
             <MenuButton func={setIsComponentVisible}/>
             {isComponentVisible && (<Container ref={ref}>
                 <Ul>
-                    <Li><Button onClick={() => removeAllThings()}>Remove all</Button></Li>
+                    <Li><Button onClick={() => {removeAllThings();setIsComponentVisible(false)}}>Remove all</Button></Li>
                 </Ul>
             </Container>)}
         </>

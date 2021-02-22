@@ -1,4 +1,12 @@
-import {ADD_THING, REMOVE_THING, SET_COUNT, SET_COUNT_BUSINESS, SET_COUNT_PERSONAL,SET_DONE} from "./ThingTypes";
+import {
+    ADD_THING,
+    CLEAR_ALL,
+    REMOVE_THING,
+    SET_COUNT,
+    SET_COUNT_BUSINESS,
+    SET_COUNT_PERSONAL,
+    SET_DONE
+} from "./ThingTypes";
 
 const initialState = {
     thingsTodo: [],
@@ -46,6 +54,9 @@ const thingReducer = (state=initialState,action) => {
                 ...state,
                 thingsTodo: action.payload
             }
+        }
+        case CLEAR_ALL:{
+            return initialState
         }
         default: return state
     }
