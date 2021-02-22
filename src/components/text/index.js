@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {H1,Flex} from "./style";
 
 const Text = ({text}) => {
@@ -8,5 +9,7 @@ const Text = ({text}) => {
         </Flex>
     )
 };
-
+Text.propTypes = {
+    text: PropTypes.string
+};
 export default Text;
