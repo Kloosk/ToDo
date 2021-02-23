@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Container, Li, Ul} from "components/hamMenu/HamMenu.style";
+import {Button, Container, ExitBtn, Ul} from "components/hamMenu/HamMenu.style";
 import {removeAllThings} from "../../helpers/todoThings/removeAllThings";
 import useComponentVisible from "../../hooks/useComponentVisible";
 import MenuButton from "shared/menuButton/MenuButton";
@@ -9,11 +9,12 @@ const HamMenu = () => {
     return (
         <>
             <MenuButton func={setIsComponentVisible}/>
-            {isComponentVisible && (<Container ref={ref}>
+            <Container ref={ref} show={isComponentVisible}>
+                <ExitBtn onClick={() => setIsComponentVisible(false)}/>
                 <Ul>
-                    <Li><Button onClick={() => {removeAllThings();setIsComponentVisible(false)}}>Remove all</Button></Li>
+                    <li><Button onClick={() => {removeAllThings();setIsComponentVisible(false)}}>Remove all</Button></li>
                 </Ul>
-            </Container>)}
+            </Container>
         </>
     );
 };
