@@ -9,6 +9,7 @@ export const Button = styled.button`
   width: 45px;
   height: 45px;
   background: ${props => props.theme.btnBg};
+  cursor: pointer;
 `;
 export const LinkRouter = styled(Link)`
   position: fixed;

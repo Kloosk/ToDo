@@ -12,6 +12,7 @@ export const Button = styled.button`
   align-items: start;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
 `;
 export const Span = styled.span`
   display: block;

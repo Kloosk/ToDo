@@ -6,6 +6,10 @@ export const Nav = styled.nav`
   height: 30vh;
   background: url(${bgDashboard}) no-repeat center/cover;
   padding: 15px;
+  @media (min-width: 768px) {
+    height: 10vh;
+    padding: 5px 60px;
+  }
 `;
 export const Flex = styled.div`
   width: 100%;
@@ -13,4 +17,7 @@ export const Flex = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (min-width: 768px) {
+    margin: 0;
+   }
 `;

@@ -5,6 +5,7 @@ export const Button = styled.button`
   border: none;
   outline: none;
   background: none;
+  cursor: pointer;
 `;
 export const LinkRouter = styled(Link)`
   text-decoration: none;

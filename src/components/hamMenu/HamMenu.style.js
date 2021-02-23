@@ -13,6 +13,10 @@ export const Container = styled.nav`
   transition: transform 1s ease;
   overflow: hidden;
   padding-top: 35px;
+  @media (min-width: 768px) {
+    width: 10vw;
+    height: 40vh;
+  }
 `;
 export const Ul = styled.ul`
   width: 100%;
@@ -43,6 +47,7 @@ export const ExitBtn = styled.button`
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
     &::before,
     &::after {
       content: '';
