@@ -1,5 +1,5 @@
 import React from 'react';
-import {LinkRouter,Button,Svg} from "./style";
+import {Button, LinkRouter, Svg} from "shared/undoButton/UndoButton.style";
 
 const UndoButton = ({link}) => {
     return (

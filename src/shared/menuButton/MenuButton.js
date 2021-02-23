@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button,Span} from "./style";
+import {Button, Span} from "shared/menuButton/MenuButton.style";
 
 const MenuButton = ({func}) => {
     return (

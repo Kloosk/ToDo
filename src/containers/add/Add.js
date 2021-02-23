@@ -1,9 +1,8 @@
-import React,{useReducer} from 'react';
-import {Container} from "./style";
-import NavAdd from "../../components/navAdd";
-import Form from "../../components/form";
-import CheckIcons from "../../components/checkIcons/CheckIcons";
-
+import React, {useReducer} from 'react';
+import {Container} from "containers/add/Add.style";
+import NavAdd from "components/navAdd/NavAdd";
+import Form from "components/form/Form";
+import CheckIcons from "components/checkIcons/CheckIcons";
 
 export const CheckIconsContext = React.createContext();
 const initialState = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button} from "./style";
+import {Button} from "shared/submit/Submit.style";
 
 const Submit = ({text}) => {
     return <Button>{text}</Button>

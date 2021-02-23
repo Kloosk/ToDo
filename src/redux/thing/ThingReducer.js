@@ -1,8 +1,4 @@
-import {
-    CLEAR_ALL,
-    SET_DONE,
-    SET_ALL_OBJ
-} from "./ThingTypes";
+import {CLEAR_ALL, SET_ALL_OBJ, SET_DONE} from "./ThingTypes";
 
 const initialState = {
     thingsTodo: [],

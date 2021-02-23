@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container} from "./style";
+import {Container} from "components/items/Items.style";
 import {useSelector} from "react-redux";
 import Item from "components/items/itemTodo/Item";
 

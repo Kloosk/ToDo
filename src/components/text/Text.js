@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {H1,Flex} from "./style";
+import {Flex, H1} from "components/text/Text.style";
 
 const Text = ({text}) => {
     return(

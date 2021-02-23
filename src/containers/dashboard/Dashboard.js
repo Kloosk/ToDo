@@ -1,12 +1,12 @@
-import React,{useEffect} from 'react';
-import {Container} from "./style";
-import AddButton from "../../shared/addButton";
-import NavDashboard from "../../components/navDashboard";
-import Completed from "../../components/completed";
-import Items from "../../components/items";
+import React, {useEffect} from 'react';
+import {Container} from "containers/dashboard/Dashboard.style";
+import AddButton from "shared/addButton/AddButton";
+import NavDashboard from "components/navDashboard/NavDashboard";
+import Completed from "components/completed/Completed";
+import Items from "components/items/Items";
 import {getThings} from "../../redux/thing/ThingActions";
 import {useDispatch} from "react-redux";
-import HamMenu from "../../components/hamMenu/hamMenu";
+import HamMenu from "components/hamMenu/HamMenu";
 
 const Dashboard = () => {
     const dispatch = useDispatch();

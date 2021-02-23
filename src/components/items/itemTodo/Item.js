@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Container, Done, H1, P, Time, Svg, UpperPart, LowerPart, Flex, SvgToolbar, ButtonToolbar} from "./Item.style";
+import {ButtonToolbar, Container, Done, Flex, H1, LowerPart, P, Svg, SvgToolbar, Time, UpperPart} from "./Item.style";
 import {deleteThings} from "../../../helpers/todoThings/deleteThing";
 import {setDoneFunc} from "../../../helpers/todoThings/setDone";
 import useComponentVisible from "../../../hooks/useComponentVisible";

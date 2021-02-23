@@ -1,6 +1,6 @@
 import React from 'react';
-import {Nav,H1} from "./style";
-import UndoButton from "../../shared/undoButton";
+import {H1, Nav} from "components/navAdd/NavAdd.style";
+import UndoButton from "shared/undoButton/UndoButton";
 
 const NavAdd = () => {
     return (

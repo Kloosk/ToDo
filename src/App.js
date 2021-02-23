@@ -1,9 +1,8 @@
 import React from 'react';
-import {HashRouter as Router, Switch, Route} from "react-router-dom";
-import {createGlobalStyle} from "styled-components";
-import {ThemeProvider} from "styled-components";
-import Add from "./containers/add";
-import Dashboard from "./containers/dashboard";
+import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import {createGlobalStyle, ThemeProvider} from "styled-components";
+import Add from "containers/add/Add";
+import Dashboard from "containers/dashboard/Dashboard";
 import {Provider} from "react-redux";
 import store from "./redux/store";
 

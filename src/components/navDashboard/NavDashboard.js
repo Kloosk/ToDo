@@ -1,7 +1,7 @@
 import React from 'react';
-import {Flex, Nav} from "./style";
-import Time from "../time";
-import Text from "../text";
+import {Flex, Nav} from "components/navDashboard/NavDashboard.style";
+import Time from "components/time/Time";
+import Text from "components/text/Text";
 import Counter from "../counter";
 
 const NavDashboard = () => {

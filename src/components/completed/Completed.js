@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container,P,Circle} from "./style";
+import {Circle, Container, P} from "components/completed/Completed.style";
 import {useSelector} from "react-redux";
 
 const Completed = () => {

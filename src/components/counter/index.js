@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flex,H1,FlexBlock,P} from "./style";
+import {Flex, FlexBlock, H1, P} from "./style";
 import {useSelector} from "react-redux";
 
 const Counter = () => {

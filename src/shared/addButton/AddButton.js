@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, LinkRouter, Svg} from "./style";
+import {Button, LinkRouter, Svg} from "shared/addButton/AddButton.style";
 
 const AddButton = ({link}) => {
     return (

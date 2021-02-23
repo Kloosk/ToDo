@@ -1,10 +1,10 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {useForm} from "react-hook-form";
-import {FormStyle,Error} from "./style";
-import Submit from "../../shared/submit";
-import InputText from "../../shared/input";
-import Select from "../../shared/select";
+import {Error, FormStyle} from "components/form/Form.style";
+import Submit from "shared/submit/Submit";
+import InputText from "shared/input/Input";
+import Select from "shared/select/Select";
 import {setDataInLocalStorage} from "../../helpers/todoThings/setDataInLocalStorage";
 
 const Form = () => {

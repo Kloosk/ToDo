@@ -1,4 +1,5 @@
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
+
 export const setDataInLocalStorage = (newData) => {
     newData['id'] = uuidv4();
     newData['done'] = false;
