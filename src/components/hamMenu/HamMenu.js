@@ -1,21 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button, Container, ExitBtn, Ul} from "components/hamMenu/HamMenu.style";
-import {removeAllThings} from "../../helpers/todoThings/removeAllThings";
 import useComponentVisible from "../../hooks/useComponentVisible";
 import MenuButton from "shared/menuButton/MenuButton";
+import DeleteAlertPortal from "components/hamMenu/deleteAlertPortal/DeleteAlertPortal";
+
+export const DeleteAlertContext = React.createContext(false);
 
 const HamMenu = () => {
     const [ ref, isComponentVisible,setIsComponentVisible] = useComponentVisible(false);
+    const [showDeleteAlert,setShowDeleteAlert] = useState(false);
     return (
-        <>
+        <DeleteAlertContext.Provider value={{showDeleteAlertState:showDeleteAlert,showDeleteAlertDispatch:setShowDeleteAlert}}>
             <MenuButton func={setIsComponentVisible}/>
             <Container ref={ref} show={isComponentVisible}>
                 <ExitBtn onClick={() => setIsComponentVisible(false)}/>
                 <Ul>
-                    <li><Button onClick={() => {removeAllThings();setIsComponentVisible(false)}}>Remove all</Button></li>
+                    <li><Button onClick={() => {setIsComponentVisible(false); setShowDeleteAlert(true)}}>Remove all</Button></li>
                 </Ul>
             </Container>
-        </>
+            <DeleteAlertPortal/>
+        </DeleteAlertContext.Provider>
     );
 };
 

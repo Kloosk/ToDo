@@ -34,6 +34,7 @@ export const Button = styled.button`
   background-color: #2ebaee;
   outline: none;
   margin-bottom: 2px;
+  transition: transform 0.2s ease;
   :hover{
     transform: scale(1.1);
   }

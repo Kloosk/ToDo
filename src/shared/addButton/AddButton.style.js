@@ -13,7 +13,7 @@ export const Button = styled.button`
 `;
 export const LinkRouter = styled(Link)`
   position: fixed;
-  z-index: 999;
+  z-index: 10;
   bottom: 15px;
   right: 15px;
   text-decoration: none;
