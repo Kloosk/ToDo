@@ -5,6 +5,7 @@ import Add from "containers/add/Add";
 import Dashboard from "containers/dashboard/Dashboard";
 import {Provider} from "react-redux";
 import store from "./redux/store";
+import ActivityLog from "containers/activityLog/ActivityLog";
 
 const theme = {
     btnBg: "#2EBAEE",
@@ -34,6 +35,9 @@ function App() {
                         </Route>
                         <Route exact path="/add">
                             <Add/>
+                        </Route>
+                        <Route exact path="/activity">
+                            <ActivityLog/>
                         </Route>
                     </Switch>
                 </Router>
