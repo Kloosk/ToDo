@@ -1,4 +1,5 @@
 import {v4 as uuidv4} from 'uuid';
+import {setActivity} from "helpers/activity/setActivity";
 
 export const setDataInLocalStorage = (newData) => {
     newData['id'] = uuidv4();
@@ -30,5 +31,9 @@ export const setDataInLocalStorage = (newData) => {
 
         localStorage.setItem("things", JSON.stringify(dataOfThings));
     }
+
+    //get day and set activity++
+    const day = new Date().getDay();
+    setActivity(day);
 };
 
