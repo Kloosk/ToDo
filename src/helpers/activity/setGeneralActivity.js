@@ -1,4 +1,4 @@
-export const setActivity = day => {
+export const setGeneralActivity = day => {
     const weekActivityInitObj = {
         0:0,
         1:0,

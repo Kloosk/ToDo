@@ -1,5 +1,5 @@
 import {v4 as uuidv4} from 'uuid';
-import {setActivity} from "helpers/activity/setActivity";
+import {setGeneralActivity} from "helpers/activity/setGeneralActivity";
 
 export const setDataInLocalStorage = (newData) => {
     newData['id'] = uuidv4();
@@ -34,6 +34,6 @@ export const setDataInLocalStorage = (newData) => {
 
     //get day and set activity++
     const day = new Date().getDay();
-    setActivity(day);
+    setGeneralActivity(day);
 };
 
