@@ -9,19 +9,18 @@ export const activityData = {
         {
             label: 'General activity during week',
             data: generalActivity,
-            borderColor: ['#003f5c'],
-            backgroundColor: ['#003f5c'],
-            pointBackgroundColor: ['#003f5c'],
-            pointBorderColor: ['#003f5c']
+            borderColor: ['rgba(0, 63, 92, 0.2)'],
+            backgroundColor: ['rgba(0, 63, 92, 0.2)'],
+            pointBackgroundColor: ['rgba(0, 63, 92, 0.2)'],
+            pointBorderColor: ['rgba(0, 63, 92, 0.2)']
         },
         {
             label: 'Done activity during week',
             data: doneActivity,
-            borderColor: ['#ffa600'],
-            backgroundColor: ['#ffa600'],
-            pointBackgroundColor: ['#ffa600'],
-            pointBorderColor: ['#ffa600']
+            borderColor: ['rgba(255, 166, 0, 0.2)'],
+            backgroundColor: ['rgba(255, 166, 0, 0.2)'],
+            pointBackgroundColor: ['rgba(255, 166, 0, 0.2)'],
+            pointBorderColor: ['rgba(255, 166, 0, 0.2)']
         }
-
     ]
 };

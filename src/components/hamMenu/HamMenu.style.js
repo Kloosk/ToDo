@@ -6,21 +6,22 @@ export const Container = styled.nav`
   left: 0;
   background-color: #46529d;
   z-index: 999;
-  width: 80vw;
+  width: 100vw;
   height: 50vh;
   border: 2px solid ${props => props.theme.btnBg};
   transform: ${props => props.show ? 'translateX(0)' : 'translateX(-100%)'};
   transition: transform 1s ease;
   overflow: hidden;
   padding-top: 35px;
+  display: flex;
+  justify-content: center;
   @media (min-width: 768px) {
-    width: 10vw;
+    width: 380px;
     height: 40vh;
   }
 `;
 export const Ul = styled.ul`
   width: 100%;
-  height: 100%;
   list-style: none;
 `;
 export const Button = styled.button`

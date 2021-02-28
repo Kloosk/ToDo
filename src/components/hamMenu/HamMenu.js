@@ -3,6 +3,7 @@ import {Button, Container, ExitBtn, Ul} from "components/hamMenu/HamMenu.style";
 import useComponentVisible from "../../hooks/useComponentVisible";
 import MenuButton from "shared/menuButton/MenuButton";
 import DeleteAlertPortal from "components/hamMenu/deleteAlertPortal/DeleteAlertPortal";
+import LineChart from "components/lineChart/LineChart";
 
 export const DeleteAlertContext = React.createContext(false);
 
@@ -17,6 +18,7 @@ const HamMenu = () => {
                 <Ul>
                     <li><Button onClick={() => {setIsComponentVisible(false); setShowDeleteAlert(true)}}>Remove all</Button></li>
                 </Ul>
+                <LineChart/>
             </Container>
             <DeleteAlertPortal/>
         </DeleteAlertContext.Provider>

@@ -7,7 +7,7 @@ export const Nav = styled.nav`
   background: url(${bgDashboard}) no-repeat center/cover;
   padding: 15px;
   @media (min-width: 768px) {
-    height: 10vh;
+    height: 100px;
     padding: 5px 60px;
   }
 `;
