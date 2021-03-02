@@ -20,8 +20,9 @@ export const setAllObj = (payload) => {
 export const getThings = () => dispatch => {
     const objOfThings = localStorage.getItem("things");
     if (objOfThings !== null) {
-        const {thingsTodo,count,countBusiness,countPersonal} = JSON.parse(objOfThings);
+        const {thingsTodo,count,countBusiness,countPersonal,empty} = JSON.parse(objOfThings);
         dispatch(setAllObj({
+            empty,
             thingsTodo,
             count,
             countBusiness,

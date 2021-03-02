@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flex, FlexBlock, H1, P} from "./style";
+import {Flex, FlexBlock, Title, CounterText} from "components/counter/Counter.style";
 import {useSelector} from "react-redux";
 
 const Counter = () => {
@@ -7,12 +7,12 @@ const Counter = () => {
     return (
         <Flex>
             <FlexBlock>
-                <H1>{countPersonal}</H1>
-                <P>Personal</P>
+                <CounterText>{countPersonal}</CounterText>
+                <Title>Personal</Title>
             </FlexBlock>
             <FlexBlock>
-                <H1>{countBusiness}</H1>
-                <P>Business</P>
+                <CounterText>{countBusiness}</CounterText>
+                <Title>Business</Title>
             </FlexBlock>
         </Flex>
     );

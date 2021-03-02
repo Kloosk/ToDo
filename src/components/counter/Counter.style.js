@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const H1 = styled.h1`
+export const CounterText = styled.h1`
   font-size: 1.5rem;
   color: #ffffff;
   font-weight: 400;
 `;
-export const P = styled.p`
+export const Title = styled.p`
   font-size: 0.7rem;
   color: ${props => props.theme.gray};
 `;

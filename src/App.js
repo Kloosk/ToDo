@@ -1,32 +1,19 @@
 import React from 'react';
 import {HashRouter as Router, Route, Switch} from "react-router-dom";
-import {createGlobalStyle, ThemeProvider} from "styled-components";
+import {ThemeProvider} from "styled-components";
 import Add from "containers/add/Add";
 import Dashboard from "containers/dashboard/Dashboard";
 import {Provider} from "react-redux";
 import store from "./redux/store";
+import {themes} from "assets/themes/themes";
+import {GlobalStyle} from "assets/globalStyle/globalStyle";
 
-const theme = {
-    btnBg: "#2EBAEE",
-    btnTxt: "#ffffff",
-    bg: "#46529D",
-    color: "#ffffff",
-    gray: "#D3D3D3"
-};
-const GlobalStyle = createGlobalStyle`
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-  }
-`;
 function App() {
   return (
       <>
         <GlobalStyle/>
           <Provider store={store}>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={themes}>
                 <Router>
                     <Switch>
                         <Route exact path="/">

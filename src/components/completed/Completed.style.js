@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const P = styled.p`
+export const Title = styled.p`
   font-size: 0.8rem;
   text-transform: uppercase;
   margin-right: 5px;

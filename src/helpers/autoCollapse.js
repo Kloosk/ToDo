@@ -1,3 +1,3 @@
-export const autoCollapse = (isComponentVisible,setIsComponentVisible) => {
-    setIsComponentVisible(isComponentVisible => !isComponentVisible);
+export const autoCollapse = (isComponentVisible, setIsComponentVisible) => {
+  setIsComponentVisible((isComponentVisible) => !isComponentVisible);
 };

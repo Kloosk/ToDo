@@ -8,6 +8,10 @@ export const deleteThings = (id,type) => {
     things.count--;
     type === "business" ? things.countBusiness-- : things.countPersonal--;
 
+    if(!things.count){ //things.count === 0
+        things.empty = true
+    }
+
     localStorage.setItem("things",JSON.stringify(things));
     store.dispatch(setAllObj(things));
 };

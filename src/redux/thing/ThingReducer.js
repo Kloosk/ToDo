@@ -1,6 +1,7 @@
 import {CLEAR_ALL, SET_ALL_OBJ, SET_DONE} from "./ThingTypes";
 
 const initialState = {
+    empty: true,
     thingsTodo: [],
     count: 0,
     countPersonal: 0,
@@ -11,6 +12,7 @@ const thingReducer = (state=initialState,action) => {
     switch (action.type) {
         case SET_ALL_OBJ:{
             return{
+                empty: action.payload.empty,
                 thingsTodo: action.payload.thingsTodo,
                 count: action.payload.count,
                 countPersonal: action.payload.countPersonal,
@@ -24,7 +26,10 @@ const thingReducer = (state=initialState,action) => {
             }
         }
         case CLEAR_ALL:{
-            return initialState
+            return{
+                empty: true,
+                ...initialState
+            }
         }
         default: return state
     }

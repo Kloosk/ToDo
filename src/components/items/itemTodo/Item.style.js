@@ -64,7 +64,7 @@ export const ButtonToolbar = styled.button`
   position: relative;
   border-radius: 50%;
 `;
-export const SvgToolbar = styled.svg`
+export const IconToolbar = styled.svg`
    position: absolute;
    top: 50%;
    left: 50%;

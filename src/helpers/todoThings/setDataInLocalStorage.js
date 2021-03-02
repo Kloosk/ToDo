@@ -6,6 +6,7 @@ export const setDataInLocalStorage = (newData) => {
     newData['done'] = false;
     const things = localStorage.getItem("things");
     let dataOfThings = {
+        empty: false,
         thingsTodo: [],
         count: 1,
         countPersonal: 0,
