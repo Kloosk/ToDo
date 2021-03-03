@@ -17,10 +17,10 @@ function App() {
             <ThemeProvider theme={themes}>
                 <Router>
                     <Switch>
-                        <Route exact path={routes.dashboard}>
+                        <Route exact path={routes.homeRoute}>
                             <Dashboard/>
                         </Route>
-                        <Route exact path={routes.add}>
+                        <Route exact path={routes.addRoute}>
                             <Add/>
                         </Route>
                     </Switch>

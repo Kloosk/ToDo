@@ -7,13 +7,19 @@ import InputText from "shared/input/Input";
 import Select from "shared/select/Select";
 import {setDataInLocalStorage} from "../../helpers/todoThings/setDataInLocalStorage";
 
-const Form = () => {
+
+
+const AddTodo = () => {
     const history = useHistory();
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data =>{
         setDataInLocalStorage(data);
         history.push("/");
     };
+    const objOfFormInputs = [
+        <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>,
+
+    ];
     return (
         <FormStyle onSubmit={handleSubmit(onSubmit)}>
             <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>
@@ -32,4 +38,4 @@ const Form = () => {
     );
 };
 
-export default Form;
+export default AddTodo;

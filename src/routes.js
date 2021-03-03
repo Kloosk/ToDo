@@ -1,4 +1,4 @@
 export const routes = {
-    dashboard: "/",
-    add: "/add"
+    homeRoute: "/",
+    addRoute: "/add"
 };
