@@ -12,6 +12,6 @@ export const AddTodoStyle = styled.form`
 `;
 export const Error = styled.p`
   display: block;
-  color: #C80000;
+  color: ${props => props.theme.warning};
   font-size: 0.8rem;
 `;

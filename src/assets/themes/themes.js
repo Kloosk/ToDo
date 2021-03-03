@@ -6,4 +6,5 @@ export const themes = {
     lightGreen: "#228c22",
     chartFirstAlpha: "rgba(0, 63, 92, 0.2)",
     chartSecondAlpha: "rgba(255, 166, 0, 0.2)",
+    warning: "#C80000"
 };

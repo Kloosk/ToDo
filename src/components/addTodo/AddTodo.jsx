@@ -1,13 +1,11 @@
 import React from 'react';
 import {useHistory} from "react-router-dom";
 import {useForm} from "react-hook-form";
-import {Error, FormStyle} from "components/form/Form.style";
+import {AddTodoStyle, Error} from "components/addTodo/AddTodo.style"
 import Submit from "shared/submit/Submit";
 import InputText from "shared/input/Input";
 import Select from "shared/select/Select";
 import {setDataInLocalStorage} from "../../helpers/todoThings/setDataInLocalStorage";
-
-
 
 const AddTodo = () => {
     const history = useHistory();
@@ -16,25 +14,55 @@ const AddTodo = () => {
         setDataInLocalStorage(data);
         history.push("/");
     };
-    const objOfFormInputs = [
-        <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>,
-
-    ];
+        const objOfFormInputs = [
+            {
+                name: "type",
+                value: <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>,
+            },
+            {
+                name: "name",
+                value: <InputText txt="Name" name="name" ref={register({required: true,maxLength:40,minLength: 3})}/>,
+                errors: {
+                    required:  <Error role="alert">This field is required</Error>,
+                    minLength: <Error role="alert">Min length 3</Error>,
+                    maxLength: <Error role="alert">Max length 40</Error>,
+                }
+            },
+            {
+                name: "place",
+                value: <InputText txt="Place" name="place" ref={register({required: true})}/>,
+                errors: {
+                    required: <Error role="alert">This field is required</Error>,
+                }
+            },
+            {
+                name: "time",
+                value: <InputText txt="Time" name="time" ref={register({required: true})}/>,
+                errors: {
+                    required: <Error role="alert">This field is required</Error>,
+                }
+            },
+            {
+                value: <Submit text="ADD YOUR THING"/>
+            }
+        ];
     return (
-        <FormStyle onSubmit={handleSubmit(onSubmit)}>
-            <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>
-            <InputText txt="Name" name="name" ref={register({required: true,maxLength:40,minLength: 3})}/>
-            {errors.name && errors.name.type === "required" && <Error role="alert">This field is required</Error>}
-            {errors.name && errors.name.type === "minLength" && <Error role="alert">Min length 3</Error>}
-            {errors.name && errors.name.type === "maxLength" && <Error role="alert">Max length 40</Error>}
-
-            <InputText txt="Place" name="place" ref={register({required: true})}/>
-            {errors.place && <Error role="alert">This field is required</Error>}
-
-            <InputText txt="Time" name="time" ref={register({required: true})}/>
-            {errors.time && <Error role="alert">This field is required</Error>}
-            <Submit text="ADD YOUR THING"/>
-        </FormStyle>
+        <AddTodoStyle onSubmit={handleSubmit(onSubmit)}>
+            {objOfFormInputs.map(el => {
+              return(
+                  <>
+                      {el.value}
+                      {el.errors && Object.entries(el.errors).map(([key,val]) => {
+                          return(
+                              <>
+                                  {errors[el.name] && errors[el.name].type === key && val}
+                              </>
+                          )
+                      })}
+                  </>
+              )
+            })}
+        </AddTodoStyle>
     );
 };
 
