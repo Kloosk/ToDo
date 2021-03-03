@@ -17,7 +17,7 @@ export const Circle = styled.div`
   height: 20px;
   width: 20px;
   background-color: ${props => props.theme.gray};
-  color: ${props => props.theme.color};
+  color: ${props => props.theme.white};
   text-align: center;
   border-radius: 50%;
 `;

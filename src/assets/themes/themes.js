@@ -1,8 +1,9 @@
 export const themes = {
-    btnBg: "#2EBAEE",
-    btnTxt: "#ffffff",
-    bg: "#46529D",
-    color: "#ffffff",
     gray: "#D3D3D3",
-    lightBlue: "#2ebaee"
+    white: "#ffffff",
+    lightBlue: "#2ebaee",
+    darkBlue: "#46529D",
+    lightGreen: "#228c22",
+    chartFirstAlpha: "rgba(0, 63, 92, 0.2)",
+    chartSecondAlpha: "rgba(255, 166, 0, 0.2)",
 };

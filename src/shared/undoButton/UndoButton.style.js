@@ -11,7 +11,7 @@ export const LinkRouter = styled(Link)`
   text-decoration: none;
 `;
 export const Svg = styled.svg`
-  color: ${props => props.theme.btnBg};
+  color: ${props => props.theme.lightBlue};
   height: 25px;
 `;
 

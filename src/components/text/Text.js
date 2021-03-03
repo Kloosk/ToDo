@@ -10,6 +10,6 @@ const Text = ({text}) => {
     )
 };
 Text.propTypes = {
-    text: PropTypes.string.isRequired
+    text: PropTypes.array.isRequired
 };
 export default Text;

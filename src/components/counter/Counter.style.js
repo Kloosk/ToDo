@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CounterText = styled.h1`
   font-size: 1.5rem;
-  color: #ffffff;
+  color: ${props => props.theme.white};
   font-weight: 400;
 `;
 export const Title = styled.p`

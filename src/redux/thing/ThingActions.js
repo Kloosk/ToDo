@@ -19,7 +19,7 @@ export const setAllObj = (payload) => {
 };
 export const getThings = () => dispatch => {
     const objOfThings = localStorage.getItem("things");
-    if (objOfThings !== null) {
+    if (objOfThings) {
         const {thingsTodo,count,countBusiness,countPersonal,empty} = JSON.parse(objOfThings);
         dispatch(setAllObj({
             empty,

@@ -10,6 +10,6 @@ export const Nav = styled.nav`
 `;
 export const H1 = styled.h1`
   font-size: 1rem;
-  color: ${props => props.theme.color};
+  color: ${props => props.theme.white};
   letter-spacing: 1.5px;
 `;

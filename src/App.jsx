@@ -7,6 +7,7 @@ import {Provider} from "react-redux";
 import store from "./redux/store";
 import {themes} from "assets/themes/themes";
 import {GlobalStyle} from "assets/globalStyle/globalStyle";
+import {routes} from "routes";
 
 function App() {
   return (
@@ -16,10 +17,10 @@ function App() {
             <ThemeProvider theme={themes}>
                 <Router>
                     <Switch>
-                        <Route exact path="/">
+                        <Route exact path={routes.dashboard}>
                             <Dashboard/>
                         </Route>
-                        <Route exact path="/add">
+                        <Route exact path={routes.add}>
                             <Add/>
                         </Route>
                     </Switch>

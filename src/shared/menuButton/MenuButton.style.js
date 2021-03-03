@@ -19,5 +19,5 @@ export const Span = styled.span`
   margin: 3px;
   height: 2px;
   width: 100%;
-  background: #ffffff;
+  background-color: ${props => props.theme.white};
 `;

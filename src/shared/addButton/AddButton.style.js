@@ -8,7 +8,7 @@ export const Button = styled.button`
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  background: ${props => props.theme.btnBg};
+  background: ${props => props.theme.lightBlue};
   cursor: pointer;
 `;
 export const LinkRouter = styled(Link)`
@@ -23,7 +23,7 @@ export const Svg = styled.svg`
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  color: ${props => props.theme.btnTxt};
+  color: ${props => props.theme.white};
   height: 20px;
   width: 20px
 `;

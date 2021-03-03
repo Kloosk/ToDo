@@ -3,22 +3,9 @@ import {Container} from "containers/add/Add.style";
 import NavAdd from "components/navAdd/NavAdd";
 import Form from "components/form/Form";
 import CheckIcons from "components/checkIcons/CheckIcons";
+import {checkIconsReducer, initialState} from "redux/add/addReducer";
 
 export const CheckIconsContext = React.createContext();
-const initialState = {
-  selectCheckIcons: true//true=business false=personal
-};
-const checkIconsReducer = (state=initialState,action) => {
-  switch (action.type) {
-      case 'SET_CHECK_ICONS': {
-          return{
-              selectCheckIcons: !state.selectCheckIcons
-          }
-      }
-      default: return state
-  }
-};
-
 const Add = () => {
     const [state,dispatch] = useReducer(checkIconsReducer,initialState);
     return (

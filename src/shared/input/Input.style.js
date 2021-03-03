@@ -3,17 +3,17 @@ import styled from 'styled-components'
 export const Input = styled.input`
   width: 100%;
   border: none;
-  border-bottom: 1px solid #D3D3D3;
+  border-bottom: 1px solid ${props => props.theme.gray};
   background: transparent;
-  color: #ffffff;
+  color: ${props => props.theme.white};
   padding: 10px 10px;
   margin-bottom: 20px;
   &:focus{
    border: none;
-   border-bottom: 1px solid #ffffff;
+   border-bottom: 1px solid ${props => props.theme.white};
    outline: none;
   }
   &::placeholder{
-    color: #D3D3D3;
+    color: ${props => props.theme.gray};
   }
 `;

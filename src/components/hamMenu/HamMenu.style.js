@@ -4,11 +4,11 @@ export const Container = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #46529d;
+  background-color: ${props => props.theme.darkBlue};
   z-index: 999;
   width: 100vw;
   height: 50vh;
-  border: 2px solid ${props => props.theme.btnBg};
+  border: 2px solid ${props => props.theme.lightBlue};
   transform: ${props => props.show ? 'translateX(0)' : 'translateX(-100%)'};
   transition: transform 1s ease;
   overflow: hidden;
@@ -31,8 +31,8 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 1.1rem;
   text-transform: uppercase;
-  color: #fff;
-  background-color: #2ebaee;
+  color: ${props => props.theme.white};
+  background-color: ${props => props.theme.lightBlue};
   outline: none;
   margin-bottom: 2px;
   transition: transform 0.2s ease;

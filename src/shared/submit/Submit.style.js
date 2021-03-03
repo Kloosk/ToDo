@@ -5,8 +5,8 @@ export const Button = styled.button`
   height: 50px;
   width: 100%;
   border: none;
-  color: ${props => props.theme.btnTxt};
-  background-color: ${props => props.theme.btnBg};
+  color: ${props => props.theme.white};
+  background-color: ${props => props.theme.lightBlue};
   text-transform: uppercase;
   font-size: 1.2rem;
   outline: none;

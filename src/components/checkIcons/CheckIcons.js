@@ -1,20 +1,23 @@
 import React, {useContext} from 'react';
-import {Container, SelectionElement,Underline,Icon} from "./CheckIcons.style";
+import {Container,Underline} from "./CheckIcons.style";
 import {CheckIconsContext} from "containers/add/Add";
-import personal from 'assets/svg/personal.svg'
-import business from 'assets/svg/business.svg'
+import BusinessSvg from "assets/svg/businessSvg/BusinessSvg";
+import PersonalSvg from "assets/svg/personalSvg/PersonalSvg";
+import SelectIconInForm from "components/selectIconInForm/SelectIconInForm";
+
+const objectOfIcons = {//order matters
+    businessSvg: <BusinessSvg/>,
+    personalSvg: <PersonalSvg/>
+};
 
 const CheckIcons = () => {
     const {checkIconsState} = useContext(CheckIconsContext);
     return (
         <>
             <Container>
-                <SelectionElement>
-                    <Icon src={business} alt="business"/>
-                </SelectionElement>
-                <SelectionElement>
-                    <Icon src={personal} alt="personal"/>
-                </SelectionElement>
+                {
+                    Object.values(objectOfIcons).map((icon,i) => <SelectIconInForm key={i}>{icon}</SelectIconInForm>)
+                }
             </Container>
             <Underline choice={checkIconsState.selectCheckIcons}/>
         </>

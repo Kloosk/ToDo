@@ -12,8 +12,7 @@ const Dashboard = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getThings());
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]);
+    },[dispatch]);
     return (
       <Container>
           <HamMenu/>

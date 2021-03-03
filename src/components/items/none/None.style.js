@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #2ebaee;
+  color: ${props => props.theme.lightBlue};
   @media (min-width: 768px) {
     font-size: 3rem;
     width: 50%;
@@ -30,17 +30,17 @@ export const RouterLink = styled(Link)`
 `;
 export const Button = styled.button`
   font-size: 2rem;
-  color: #fff;
-  background: #2ebaee;
+  color: ${props => props.theme.white};
+  background: ${props => props.theme.lightBlue};
   padding: 7px 14px;
-  border: 3px solid #2ebaee;
+  border: 3px solid ${props => props.theme.lightBlue};
   cursor: pointer;
   &:hover{
     transform: translateY(2px);
   }
   &:focus{
     outline: none;
-    border: 3px solid #2ebaee;
+    border: 3px solid ${props => props.theme.lightBlue};
   }
    @media (min-width: 768px) {
     font-size: 3rem;
