@@ -1,4 +1,7 @@
-export const setGeneralActivity = day => {
+import store from "redux/store";
+import {setGeneralActivity} from "redux/activityChart/activityChartActions";
+
+export const setGeneralActivityFunc = day => {
     const weekActivityInitObj = {
         0:0,
         1:0,
@@ -13,9 +16,13 @@ export const setGeneralActivity = day => {
     if (weekActivityObj !== null) {//exists
         const weekActivityParseObj = JSON.parse(weekActivityObj);
         weekActivityParseObj[day]++;
+
+        store.dispatch(setGeneralActivity(weekActivityParseObj));
         localStorage.setItem("activity", JSON.stringify(weekActivityParseObj));
     }else{
         weekActivityInitObj[day]++;
+
+        store.dispatch(setGeneralActivity(weekActivityInitObj));
         localStorage.setItem("activity", JSON.stringify(weekActivityInitObj));
     }
 };

@@ -1,4 +1,4 @@
-import {setAllObj} from "../../redux/thing/ThingActions";
+import {setAllObj} from "redux/thing/thingActions";
 import store from "../../redux/store";
 
 export const deleteThings = (id,type) => {

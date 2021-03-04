@@ -1,4 +1,4 @@
-import {CLEAR_ALL, SET_ALL_OBJ, SET_DONE} from "./ThingTypes";
+import {CLEAR_ALL, SET_ALL_OBJ, SET_DONE} from "redux/thing/thingTypes";
 
 const initialState = {
     empty: true,

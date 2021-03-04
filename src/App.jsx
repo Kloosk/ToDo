@@ -7,7 +7,7 @@ import {Provider} from "react-redux";
 import store from "./redux/store";
 import {themes} from "assets/themes/themes";
 import {GlobalStyle} from "assets/globalStyle/globalStyle";
-import {routes} from "routes";
+import {routes} from "routes/routes";
 
 function App() {
   return (

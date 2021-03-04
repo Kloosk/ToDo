@@ -16,7 +16,7 @@ const HamMenu = () => {
             <Container ref={ref} show={isComponentVisible}>
                 <ExitBtn onClick={() => setIsComponentVisible(false)}/>
                 <Ul>
-                    <li><Button onClick={() => {setIsComponentVisible(false); setShowDeleteAlert(true)}}>Remove all</Button></li>
+                    <li><Button onClick={() => {setIsComponentVisible(false); setShowDeleteAlert(true)}}>Clear all</Button></li>
                 </Ul>
                 <LineChart/>
             </Container>

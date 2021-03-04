@@ -1,6 +1,6 @@
 import store from "../../redux/store";
-import {setDone} from "../../redux/thing/ThingActions";
-import {setDoneActivity} from "helpers/activity/setDoneActivity";
+import {setDone} from "redux/thing/thingActions";
+import {setDoneActivityFunc} from "helpers/activity/setDoneActivityFunc";
 
 export const setDoneFunc = id => {
     const {things} = store.getState();
@@ -11,5 +11,5 @@ export const setDoneFunc = id => {
 
     //get day and set done activity++
     const day = new Date().getDay();
-    setDoneActivity(day);
+    setDoneActivityFunc(day);
 };
