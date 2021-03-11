@@ -29,8 +29,7 @@ const LineChart = () => {
                 pointBorderColor: [chartSecondAlpha]
             }
                 ]
-            }}
-                  options={{scales: {yAxes:[{ticks:{min:0,stepSize:1}}]}}}/>
+            }}/>
         </Container>
     );
 };
