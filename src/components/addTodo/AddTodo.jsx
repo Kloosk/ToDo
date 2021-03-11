@@ -17,9 +17,43 @@ const AddTodo = () => {
         history.push("/");
     };
     const objOfFormInputs = [
+<<<<<<< Updated upstream
         <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>,
 
     ];
+=======
+            {
+                name: "type",
+                value: <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>,
+            },
+            {
+                name: "name",
+                value: <InputText txt="Name" name="name" ref={register({required: true,maxLength:40,minLength: 3})}/>,
+                errors:{
+                    required:  <Error role="alert">This field is required</Error>,
+                    minLength: <Error role="alert">Min length 3</Error>,
+                    maxLength: <Error role="alert">Max length 40</Error>,
+                }
+            },
+            {
+                name: "place",
+                value: <InputText txt="Place" name="place" ref={register({required: true})}/>,
+                errors: {
+                    required: <Error role="alert">This field is required</Error>,
+                }
+            },
+            {
+                name: "time",
+                value: <InputText txt="Time" name="time" ref={register({required: true})}/>,
+                errors: {
+                    required: <Error role="alert">This field is required</Error>,
+                }
+            },
+            {
+                value: <Submit text="ADD YOUR THING"/>
+            }
+        ];
+>>>>>>> Stashed changes
     return (
         <FormStyle onSubmit={handleSubmit(onSubmit)}>
             <Select name="type" options={{business:"Business",personal:"Personal"}} ref={register}/>
